@@ -19,6 +19,14 @@ body {
   background-image: url("./assets/warm-bg.jpg");
 }
 
+.App.clouds {
+  background-image: url("./assets/cloudy-bg.jpg");
+}
+
+.App.rain {
+  background-image: url("./assets/rain-bg.jpg");
+}
+
 main {
   min-height: 100vh;
   background-image: linear-gradient(

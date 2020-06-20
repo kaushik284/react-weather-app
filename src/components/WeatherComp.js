@@ -57,16 +57,29 @@ const WeatherComp = (props) => {
 
     return `${day} ${date} ${month}  ${year}`;
   };
-  return (
-    <div
-      className={
-        typeof weather.main != "undefined"
+  let cName = "App";
+  if (typeof weather.main != "undefined") {
+    if (weather.main.temp > 24) {
+      cName = "App warm";
+    } else {
+      cName = "App";
+    }
+    const weatherStr = weather.weather[0].main.toString().toLowerCase();
+    if (weatherStr === "clouds") {
+      cName = "App clouds";
+    } else if (weatherStr === "rain") {
+      cName = "App rain";
+    }
+  }
+  /**
+   * typeof weather.main != "undefined"
           ? weather.main.temp > 25
             ? "App warm"
             : "App"
           : "App"
-      }
-    >
+   */
+  return (
+    <div className={cName}>
       <main>
         <div className="search-box">
           <input
