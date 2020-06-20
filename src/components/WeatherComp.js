@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
+
 import "../App.css";
 
 const WeatherComp = (props) => {
@@ -101,7 +101,5 @@ const WeatherComp = (props) => {
     </div>
   );
 };
-
-WeatherComp.propTypes = {};
 
 export default WeatherComp;
