@@ -95,7 +95,6 @@ const WeatherComp = (props) => {
           ) : (
             ""
           )}
-          ;
         </div>
       </main>
     </div>
